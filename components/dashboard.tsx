@@ -41,7 +41,7 @@ export function Dashboard() {
 
   return (
     <div className="flex h-screen overflow-hidden bg-background">
-      {/* Mobile sidebar overlay */}
+    
       {sidebarOpen && (
         <div
           className="fixed inset-0 z-40 bg-foreground/20 lg:hidden"
@@ -49,7 +49,7 @@ export function Dashboard() {
         />
       )}
 
-      {/* Sidebar - mobile */}
+    
       <div
         className={`fixed inset-y-0 left-0 z-50 transform transition-transform lg:hidden ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -64,7 +64,7 @@ export function Dashboard() {
         />
       </div>
 
-      {/* Sidebar - desktop */}
+   
       <div className="hidden lg:block">
         <DashboardSidebar
           activeFilter={activeFilter}
@@ -72,9 +72,9 @@ export function Dashboard() {
         />
       </div>
 
-      {/* Main content */}
+    
       <main className="flex flex-1 flex-col overflow-hidden">
-        {/* Top bar */}
+      
         <header className="flex items-center gap-4 border-b border-border px-6 py-4">
           <button
             onClick={() => setSidebarOpen(true)}
@@ -104,7 +104,6 @@ export function Dashboard() {
           </Button>
         </header>
 
-        {/* Content */}
         <div className="flex-1 overflow-y-auto p-6">
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-xl font-semibold text-foreground">
