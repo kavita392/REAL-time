@@ -15,7 +15,7 @@ export function CollaboratorCursor({
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
-    // Simulate cursor movement
+ 
     const interval = setInterval(() => {
       if (!containerRef.current) return
 
@@ -28,7 +28,6 @@ export function CollaboratorCursor({
         left: Math.random() * maxLeft,
       })
 
-      // Blink effect
       setVisible(true)
       setTimeout(() => setVisible(true), 500)
     }, 3000 + Math.random() * 4000)
@@ -43,12 +42,12 @@ export function CollaboratorCursor({
       className="absolute pointer-events-none transition-all duration-700 ease-in-out z-10"
       style={{ top: position.top, left: position.left }}
     >
-      {/* Cursor line */}
+    
       <div
         className="w-0.5 h-5 rounded-full"
         style={{ backgroundColor: color }}
       />
-      {/* Name tag */}
+   
       <div
         className="mt-0.5 whitespace-nowrap rounded px-1.5 py-0.5 text-[10px] font-medium text-primary-foreground"
         style={{ backgroundColor: color }}
