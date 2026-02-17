@@ -44,7 +44,7 @@ export function DocumentCard({ document }: { document: Document }) {
         }
       }}
     >
-      {/* Header */}
+     
       <div className="flex items-start justify-between">
         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
           <FileText className="h-5 w-5 text-primary" />
@@ -71,7 +71,7 @@ export function DocumentCard({ document }: { document: Document }) {
         </DropdownMenu>
       </div>
 
-      {/* Title & preview */}
+    
       <h3 className="mt-4 text-sm font-semibold text-card-foreground line-clamp-1">
         {document.title}
       </h3>
@@ -79,7 +79,6 @@ export function DocumentCard({ document }: { document: Document }) {
         {document.content || "Empty document"}
       </p>
 
-      {/* Footer */}
       <div className="mt-4 flex items-center justify-between">
         <span className="text-xs text-muted-foreground">
           {formatRelativeTime(document.lastEdited)}
