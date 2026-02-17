@@ -36,7 +36,7 @@ export function VersionHistory({
 
   return (
     <div className="flex w-80 shrink-0 flex-col border-l border-border bg-card">
-      {/* Header */}
+     
       <div className="flex items-center justify-between border-b border-border px-4 py-3">
         <div className="flex items-center gap-2">
           <RotateCcw className="h-4 w-4 text-muted-foreground" />
@@ -51,7 +51,7 @@ export function VersionHistory({
         </button>
       </div>
 
-      {/* Versions list */}
+     
       <ScrollArea className="flex-1">
         <div className="flex flex-col gap-1 p-3">
           {versions.length > 0 ? (
@@ -79,7 +79,7 @@ export function VersionHistory({
                   by {version.author}
                 </span>
 
-                {/* Show changes when expanded */}
+              
                 {selectedVersion === version.id && (
                   <div className="mt-2 flex flex-col gap-1.5 w-full">
                     {version.changes.map((change, idx) => (
