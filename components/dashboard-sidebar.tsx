@@ -24,13 +24,13 @@ export function DashboardSidebar({
 
   return (
     <aside className="flex w-64 shrink-0 flex-col border-r border-border bg-sidebar">
-      {/* Logo */}
+     
       <div className="flex items-center gap-2 px-5 py-5 border-b border-border">
         <FileText className="h-6 w-6 text-primary" />
         <span className="text-lg font-semibold text-sidebar-foreground">Collabo</span>
       </div>
 
-      {/* New Document */}
+   
       <div className="px-3 pt-4 pb-2">
         <Button
           onClick={() => createDocument("Untitled Document")}
@@ -42,7 +42,7 @@ export function DashboardSidebar({
         </Button>
       </div>
 
-      {/* Navigation */}
+   
       <nav className="flex flex-col gap-1 px-3 pt-2">
         {navItems.map((item) => (
           <button
@@ -61,10 +61,10 @@ export function DashboardSidebar({
         ))}
       </nav>
 
-      {/* Spacer */}
+    
       <div className="flex-1" />
 
-      {/* User section */}
+ 
       <div className="border-t border-border px-3 py-3 flex flex-col gap-1">
         <button className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-sidebar-accent/50 hover:text-sidebar-foreground transition-colors">
           <Settings className="h-4 w-4" />
