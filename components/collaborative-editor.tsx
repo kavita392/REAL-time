@@ -96,7 +96,7 @@ export function CollaborativeEditor() {
   return (
     <div className="flex h-screen overflow-hidden bg-background">
       <div className="flex flex-1 flex-col overflow-hidden">
-        {/* Header */}
+      
         <header className="flex items-center justify-between border-b border-border bg-card px-4 py-3">
           <div className="flex items-center gap-3">
             <button
@@ -107,7 +107,7 @@ export function CollaborativeEditor() {
               <ArrowLeft className="h-4 w-4" />
             </button>
 
-            {/* Editable title */}
+          
             {isEditingTitle ? (
               <input
                 ref={titleInputRef}
@@ -132,7 +132,7 @@ export function CollaborativeEditor() {
               </button>
             )}
 
-            {/* Online indicator */}
+       
             <div className="flex items-center gap-1.5 ml-2">
               <div className="h-2 w-2 rounded-full bg-success animate-pulse" />
               <span className="text-xs text-muted-foreground hidden sm:inline">
@@ -142,7 +142,7 @@ export function CollaborativeEditor() {
           </div>
 
           <div className="flex items-center gap-2">
-            {/* Active collaborators */}
+         
             <TooltipProvider>
               <div className="flex -space-x-2 mr-2">
                 {activeDocument.collaborators
@@ -165,7 +165,7 @@ export function CollaborativeEditor() {
               </div>
             </TooltipProvider>
 
-            {/* History button */}
+          
             <Button
               variant="outline"
               size="sm"
@@ -183,7 +183,7 @@ export function CollaborativeEditor() {
               <History className="h-4 w-4" />
             </button>
 
-            {/* Share button */}
+          
             <Dialog>
               <DialogTrigger asChild>
                 <Button size="sm" className="gap-2">
@@ -262,13 +262,13 @@ export function CollaborativeEditor() {
           </div>
         </header>
 
-        {/* Toolbar */}
+      
         <EditorToolbar />
 
-        {/* Editor Canvas */}
+    
         <div className="relative flex-1 overflow-y-auto">
           <div className="relative mx-auto max-w-4xl px-6 py-8 lg:px-16 min-h-full">
-            {/* Mock collaborator cursors */}
+          
             {onlineCollaborators.map((collab) => (
               <CollaboratorCursor
                 key={collab.id}
@@ -289,7 +289,6 @@ export function CollaborativeEditor() {
         </div>
       </div>
 
-      {/* Version History Sidebar */}
       {showHistory && (
         <VersionHistory
           versions={activeDocument.versions}
