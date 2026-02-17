@@ -21,7 +21,7 @@ export function AuthScreen() {
 
   return (
     <div className="flex min-h-screen">
-      {/* Left Panel - Marketing */}
+    
       <div className="hidden lg:flex lg:w-1/2 flex-col justify-between bg-primary p-12 text-primary-foreground">
         <div>
           <div className="flex items-center gap-2">
@@ -63,10 +63,10 @@ export function AuthScreen() {
         </p>
       </div>
 
-      {/* Right Panel - Auth Form */}
+     
       <div className="flex w-full lg:w-1/2 items-center justify-center p-8 bg-background">
         <div className="w-full max-w-md flex flex-col gap-8">
-          {/* Mobile Logo */}
+        
           <div className="flex items-center gap-2 lg:hidden">
             <FileText className="h-7 w-7 text-primary" />
             <span className="text-xl font-semibold text-foreground">Collabo</span>
